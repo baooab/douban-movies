@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>豆瓣电影排行榜----张宝的博客</title>
+    <title>豆瓣电影Top250</title>
     <style>
         body {
             font-family: Georgia, serif;
