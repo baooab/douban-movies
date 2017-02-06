@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习 Laravel ---- 模板继承</title>
+    <style type="text/css">
+        * {
+            font-family: Georgia, serif;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header, main, footer {
+            display: flex;
+            flex-basis: 100%;
+
+            background-color: lightblue;
+        }
+
+        header, footer {
+            min-height: 38px;
+
+            line-height: 38px;
+        }
+
+        main {
+            justify-content: space-between;
+
+            min-height: 300px;
+        }
+
+        main > article {
+            flex-basis: 68%;
+
+            background-color: rgba(255,255,255,.3);
+        }
+
+        main > aside {
+            flex-basis: 30%;
+
+            background-color: rgba(0,0,0,.3);
+        }
+
+        @media (max-width: 768px) {
+            main > article {
+                flex-basis: 100%
+            }
+            main > aside {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body class="container">
+    <header>header</header>
+    <main>
+        <article>article</article>
+        <aside>aside</aside>
+    </main>
+    <footer>(c) footer Copyright</footer>
+</body>
+</html>
