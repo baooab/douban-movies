@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="张宝的个人网站,张宝的博客,张宝的文章,咚咚宝的文章,咚咚宝的博客,咚咚宝的个人网站,龙抬头那天出生的孩子的网站, 龙抬头那天出生的孩子的文章,龙抬头那天出生的孩子的博客,张宝,咚咚宝,龙抬头那天出生的孩子,个人网站,博客,文章,随笔,学习笔记">
+    <meta name="description" content="张宝的个人网站提供技术文章和随笔，免费观看，作者就是张宝">
+    <title>张宝的个人网站</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            font-family: Georgia, serif;
+            text-shadow:0 1px 1px #333;
+            color: #fff;
+
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 2s ease;
+        }
+
+/*        html {
+            background: url(http://image.wufazhuce.com/Fo0FAwZqoMSorH4yBo0Qsd4odv72) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        body {
+            background: radial-gradient(rgba(255,0,0,0), rgba(255,0,0,.25));
+        }*/
+
+        body {
+            background: url(http://image.wufazhuce.com/Fo0FAwZqoMSorH4yBo0Qsd4odv72) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box {
+            position: absolute;
+            width: 400px;
+            height: 220px;
+            padding: 10px;
+            top: calc(50% - 110px);
+            left: calc(50% - 200px);
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            background-color: rgba(0,0,0,.37);
+            border-radius: 1.5em;
+        }
+
+        .box > .content {
+            width: 98%;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            padding: .5em;
+            border-radius: .5em;
+        }
+
+        .box > .content:hover {
+            background-color: rgba(255,255,255,1);
+            color: #000;
+        }
+
+        .box > .content:hover > a{
+            color: #000;
+        }
+
+        .box a {
+            text-decoration: none;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+/*  */
+        .box h1 {
+            font-size: 1.4rem;
+            color: #fefefe;
+            padding-top: 0.4rem;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .box h1:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            flex-basis: 100%;
+            text-align: right;
+            padding-right: .5em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: .8rem;
+            }
+            .box {
+                width: 300px;
+                height: 165px;
+                padding: 10px;
+                top: calc(50% - 82.5px);
+                left: calc(50% - 150px);
+            }
+            .box h1 {
+                font-size: 1.05rem;
+                color: #fefefe;
+                padding-top: 0.1rem;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 id="zb-website-header">Zhang Bao's Personal Website</h1>
+        <p class="content"><a href="/blog">Blog</a> / <a href="/tweets">Tweets</a> / <a href="/blog/about-me.html">About Me</a></p>
+        <footer>baooab.com</footer>
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+
+        function switchPageBackgroundImage() {
+            var bd = document.body;
+            var imgPub = [
+                'http://image.wufazhuce.com/Fo0FAwZqoMSorH4yBo0Qsd4odv72',
+                'http://image.wufazhuce.com/FrSMq7M33WflIEQC8pRpzbQxM_N8',
+                'http://www.ruanyifeng.com/images_pub/pub_335.jpg',
+                'http://image.wufazhuce.com/Fv6_9S_4S769NmXzwaN9c1hRiv9_'
+            ];
+
+            var randomIndex = Math.round(Math.random() * (imgPub.length - 1));
+
+            bd.style.backgroundSize = 'cover';
+            bd.style.backgroundRepeat = 'no-repeat';
+            bd.style.backgroundImage = 'url(' + imgPub[randomIndex] + ')';
+        }
+
+        switchPageBackgroundImage();
+        document.querySelector('#zb-website-header').onclick = switchPageBackgroundImage;
+    })
+    </script>
+</body>
+</html>
